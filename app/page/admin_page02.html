@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>금융 쿠차 모픽 관리자</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="keyword" content="금융, 저축, 보험, 대출, 카드, P2P, 환율, 금융 계산기, 수수료 " />
+        <meta name="description" content="yfg 모픽" />
+        <meta name="author" content="yfg" />
+        <meta name="publisher" content="yfg" />
+        <meta name="robots" content="ALL" /> 
+        <meta name="robots" content="INDEX, FOLLOW" />
+        
+        <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="/lib/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css" />
+        <!-- <link rel="stylesheet" href="http://code.runnable.com/styles/index.6697ce3494756f55a96d3216b3a8542479afde6a.css" /> -->
+        <link rel="stylesheet" href="/dist/static/css/admin-ui.css" />
+    </head>
+
+    <body id="admin">
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div id="header_wrapper" class="clearfix">
+                    <nav id="gnb">
+                        <ul class="gnb-list clearfix">
+                            <li><a href="/" title="관리">관리<span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span></a></li>
+                            <li class="vl">|</li>
+                            <li><a href="/" title="이벤트">이벤트</a></li>
+                            <li class="vl">|</li>
+                            <li><a href="/" title="고객센터">고객센터<span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span></a></li>
+                        </ul>
+                        <ol class="gnb-sub-list">
+                            <li><a href="/" title="추천상품 관리">추천상품 관리</a></li>
+                            <li><a href="/" title="이벤트 관리">이벤트 관리</a></li>
+                            <li><a href="/" title="1:1 문의 답변">1:1 문의 답변</a></li>
+                            <li><a href="/" title="통계">통계</a></li>
+                        </ol>
+                        <ol class="gnb-sub-list"></ol>
+                        <ol class="gnb-sub-list">
+                            <li><a href="/" title="고객센터1">고객센터1</a></li>
+                            <li><a href="/" title="고객센터2">고객센터2</a></li>
+                        </ol>
+                    </nav>
+                </div>
+                <h1><a href="/" title="Mo-Pic"><img src="/dist/static/images/common/mp_logo.png" alt="mopic" width="114"></a></h1>
+                <div class="quick_link clearfix">
+                    <ol>
+                        <li><a href="/" title="계산기"><span class="ico-cal"></span>계산기</a></li>
+                        <li><a href="/" title="수수료"><span class="ico-char"></span>수수료</a></li>
+                        <li><a href="/" title="지점찾기"><span class="ico-store"></span>지점찾기</a></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <div id="content-wrapper" class="container">
+            <div class="row">
+                <div class="current-location col-md-12">
+                    <ol class="clearfix">
+                        <li><a href="/" title="home"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a></li>
+                        <li class="arr">&gt;</li>
+                        <li><a href="/" title="관리">관리</a></li>
+                        <li class="arr">&gt;</li>
+                        <li><a href="/" title="이벤트 관리">이벤트 관리</a></li>
+                        <li class="arr">&gt;</li>
+                        <li><a href="/" title="이벤트 조회">이벤트 조회</a></li>
+                    </ol>
+                </div>
+                <div class="clearfix">
+                    <nav class="left-navi col-md-2">
+                        <h2>관리</h2>
+                        <ol>
+                            <li>
+                                <a href="/" title="추천상품 관리">추천상품 관리<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></a>
+                                <ol class="sub-list">
+                                    <li><a href="/" title="상품정보 조회">상품정보 조회</a></li>
+                                    <li><a href="/" title="상품등록">상품등록</a></li>
+                                </ol>
+                            </li>
+                            <li class="select">
+                                <a href="/" title="이벤트 관리">이벤트 관리<span class="glyphicon glyphicon-menu-up" aria-hidden="true"></span></a>
+                                <ol class="sub-list">
+                                    <li class="select"><a href="/" title="이벤트 조회">이벤트 조회</a></li>
+                                    <li><a href="/" title="이벤트 등록">이벤트 등록</a></li>
+                                </ol>
+                            </li>
+                            <li>
+                                <a href="/" title="메뉴관리">메뉴관리</a>
+                            </li>
+                            <li>
+                                <a href="/" title="배경이미지설정">배경이미지설정</a>
+                            </li>
+                            <li>
+                                <a href="/" title="1:1 문의 답변">1:1 문의 답변</a>
+                            </li>
+                            <li>
+                                <a href="/" title="통계">통계<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></a>
+                                <ol class="sub-list">
+                                    <li><a href="/" title="Dashboard">Dashboard</a></li>
+                                    <li><a href="/" title="방문현황">방문현황</a></li>
+                                    <li><a href="/" title="회원분석">회원분석</a></li>
+                                </ol>
+                            </li>
+                        </ol>
+                    </nav>
+                    <div class="cont-area col-md-10">
+                        <div class="form-wrap clearfix">
+                            <form id="product-check" name="product-check" method="post" action="/">
+                                <h3>이벤트 조회</h3>
+                                <table class="table">
+                                    <caption>이벤트 조회</caption>
+                                    <colgroup>
+                                        <col width="130px;"></col>
+                                        <col width="*"></col>
+                                        <col width="*"></col>
+                                    </colgroup>
+                                    <thead></thead>
+                                    <tbody>
+                                        <tr>
+                                            <th>제목검색</th>
+                                            <td colspan="2">
+                                                <div class="input-group" style="width:100%;"><input type="text" maxlength="100" id="event-name-search" class="form-control" placeholder="검색할 이벤트 제목을 넣어주세요." aria-label="검색할 이벤트 제목을 넣어주세요." /><span class="input-group-addon">0/100</span></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>등록상태</th>
+                                            <td colspan="2">
+                                                <div class="register-status clearfix">
+                                                    <div class="checkbox">
+                                                        <label for="register-all"><input type="checkbox" checked id="register-all" name="register-all" />전체</label>
+                                                    </div>
+                                                    <div class="checkbox">
+                                                        <label for="register-ing"><input type="checkbox" id="register-ing" name="register-ing" />등록 중</label>
+                                                    </div>
+                                                    <div class="checkbox">
+                                                        <label for="register-end"><input type="checkbox" id="register-end" name="register-end" />등록 종료</label>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>기간</th>
+                                            <td>
+                                                <div class="register-period btn-group" role="group" aria-label="상품정보 조회 기간">
+                                                    <button type="button" class="btn btn-default">오늘</button>
+                                                    <button type="button" class="btn btn-default">1주일</button>
+                                                    <button type="button" class="btn btn-default">1개월</button>
+                                                    <button type="button" class="btn btn-default">3개월</button>
+                                                    <button type="button" class="btn btn-default">6개월</button>
+                                                    <button type="button" class="btn btn-default">1년</button>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="date-pic-group clearfix">
+                                                    <div class="form-group">
+                                                        <div class='input-group date' id='from-dpic'>
+                                                            <input type='text' class="form-control" />
+                                                            <span class="input-group-addon">
+                                                                <span class="glyphicon glyphicon-calendar"></span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group hv">-</div>
+                                                    <div class="form-group">
+                                                        <div class='input-group date' id='to-dpic'>
+                                                            <input type='text' class="form-control" />
+                                                            <span class="input-group-addon">
+                                                                <span class="glyphicon glyphicon-calendar"></span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="submit-area">
+                                    <button type="submit" id="product-search" name="product-search">검색</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="table-list">
+                            <div class="table-list-header clearfix">
+                                <h3>이벤트 목록(총3개)</h3>
+                                <div class="list-sort">
+                                    <ul class="clearfix">
+                                        <li class="active"><a href="/">전체</a></li>
+                                        <li class="vl">|</li>
+                                        <li><a href="/">진행중</a></li>
+                                        <li class="vl">|</li>
+                                        <li>진행 종료</li>
+                                    </ul>
+                                </div>
+                                <div class="list-control">
+                                    <div class="dropdown">
+                                      <button class="btn btn-default dropdown-toggle" type="button" id="view-count-drop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                        10개씩 보기
+                                        <span class="caret"></span>
+                                      </button>
+                                      <ul class="dropdown-menu" aria-labelledby="view-count-drop">
+                                        <li><a href="/">10개씩 보기</a></li>
+                                        <li><a href="/">20개씩 보기</a></li>
+                                        <li><a href="/">50개씩 보기</a></li>
+                                      </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <table class="table">
+                                <caption>상품목록</caption>
+                                <colgroup>
+                                    <col width="*"></col>
+                                    <col width="10%;"></col>
+                                    <col width="10%;"></col>
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>제목</th>
+                                        <th>등록일</th>
+                                        <th>등록상태</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="evt">
+                                    <tr>
+                                        <td>
+                                           현대해상 굿앤굿 어린이보험 10주년 축하 이벤트 
+                                        </td>
+                                        <td class="date">2015.11.25</td>
+                                        <td class="status">진행 중</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                           현대해상 굿앤굿 어린이보험 10주년 축하 이벤트 
+                                        </td>
+                                        <td class="date">2015.11.25</td>
+                                        <td class="status">진행 중</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                           현대해상 굿앤굿 어린이보험 10주년 축하 이벤트 
+                                        </td>
+                                        <td class="date">2015.11.25</td>
+                                        <td class="status">진행 중</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                           현대해상 굿앤굿 어린이보험 10주년 축하 이벤트 
+                                        </td>
+                                        <td class="date">2015.11.25</td>
+                                        <td class="status">진행 중</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                           현대해상 굿앤굿 어린이보험 10주년 축하 이벤트 
+                                        </td>
+                                        <td class="date">2015.11.25</td>
+                                        <td class="status">진행 중</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                           현대해상 굿앤굿 어린이보험 10주년 축하 이벤트 
+                                        </td>
+                                        <td class="date">2015.11.25</td>
+                                        <td class="status">진행 중</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                           현대해상 굿앤굿 어린이보험 10주년 축하 이벤트 
+                                        </td>
+                                        <td class="date">2015.11.25</td>
+                                        <td class="status">진행 종료</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                           현대해상 굿앤굿 어린이보험 10주년 축하 이벤트 
+                                        </td>
+                                        <td class="date">2015.11.25</td>
+                                        <td class="status">진행 종료</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                           현대해상 굿앤굿 어린이보험 10주년 축하 이벤트 
+                                        </td>
+                                        <td class="date">2015.11.25</td>
+                                        <td class="status">진행 종료</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                           현대해상 굿앤굿 어린이보험 10주년 축하 이벤트 
+                                        </td>
+                                        <td class="date">2015.11.25</td>
+                                        <td class="status">진행 중</td>
+                                    </tr>
+                                </tbody>
+                           </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <ul class="clearfix">
+                <li><a href="/" title="Mo-Pic란?">Mo-Pic란?</a></li>
+                <li class="vl"><span>|</span></li>
+                <li><a href="/" title="서비스약관">서비스약관</a></li>
+                <li class="vl"><span>|</span></li>
+                <li><a href="/" title="개인정보취급방침">개인정보취급방침</a></li>
+                <li class="vl"><span>|</span></li>
+                <li><a href="/" title="Yello Financial Group">Yello Financial Group</a></li>
+            </ul>
+        </footer>
+        <script src="/lib/jquery/dist/jquery.min.js"></script>
+        <!--<script src="http://web-b570ccdb-41e7-4bfb-b1b1-14d4b275c0f0.runnablecodesnippets.com/js/bootstrap-datepicker.js"></script>-->
+        <script src="/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="/lib/moment/min/moment-with-locales.js"></script>
+        <script src="/lib/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+        
+        <script src="/dist/static/scripts/admin-ui.js"></script>
+
+        <script type="text/javascript">
+            $(function() {
+
+                $('#from-dpic').datetimepicker();
+                $('#to-dpic').datetimepicker({
+                    useCurrent: false
+                });
+                $("#from-dpic").on("dp.change", function (e) {
+                    $('#to-dpic').data("DateTimePicker").minDate(e.date);
+                });
+                $("#to-dpic").on("dp.change", function (e) {
+                    $('#from-dpic').data("DateTimePicker").maxDate(e.date);
+                });  
+            });
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

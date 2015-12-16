@@ -1,0 +1,606 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>금융 쿠차 모픽 관리자</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="keyword" content="금융, 저축, 보험, 대출, 카드, P2P, 환율, 금융 계산기, 수수료 " />
+        <meta name="description" content="yfg 모픽" />
+        <meta name="author" content="yfg" />
+        <meta name="publisher" content="yfg" />
+        <meta name="robots" content="ALL" /> 
+        <meta name="robots" content="INDEX, FOLLOW" />
+        
+        <link type="text/css" rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css" />
+        <link type="text/css" rel="stylesheet" href="/lib/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css" />
+        <link type="text/css" rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css" />
+        <link type="text/css" rel="stylesheet" href="/lib/summernote/dist/summernote.css" />
+        <link type="text/css" rel="stylesheet" href="/lib/jstree/dist/themes/default/style.min.css" />
+        <link type="text/css" rel="stylesheet" href="/lib/bootstrap-fileinput/css/fileinput.min.css" />
+        <link type="text/css" rel="stylesheet" href="/dist/static/css/admin-ui.css" />
+    </head>
+
+    <body id="admin">
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div id="header_wrapper" class="clearfix">
+                    <nav id="gnb">
+                        <ul class="gnb-list clearfix">
+                            <li><a href="/" title="관리">관리<span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span></a></li>
+                            <li class="vl">|</li>
+                            <li><a href="/" title="이벤트">이벤트</a></li>
+                            <li class="vl">|</li>
+                            <li><a href="/" title="고객센터">고객센터<span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span></a></li>
+                        </ul>
+                        <ol class="gnb-sub-list">
+                            <li><a href="/" title="추천상품 관리">추천상품 관리</a></li>
+                            <li><a href="/" title="이벤트 관리">이벤트 관리</a></li>
+                            <li><a href="/" title="1:1 문의 답변">1:1 문의 답변</a></li>
+                            <li><a href="/" title="통계">통계</a></li>
+                        </ol>
+                        <ol class="gnb-sub-list"></ol>
+                        <ol class="gnb-sub-list">
+                            <li><a href="/" title="고객센터1">고객센터1</a></li>
+                            <li><a href="/" title="고객센터2">고객센터2</a></li>
+                        </ol>
+                    </nav>
+                </div>
+                <h1><a href="/" title="Mo-Pic"><img src="/dist/static/images/common/mp_logo.png" alt="mopic" width="114"></a></h1>
+                <div class="quick_link clearfix">
+                    <ol>
+                        <li><a href="/" title="계산기"><span class="ico-cal"></span>계산기</a></li>
+                        <li><a href="/" title="수수료"><span class="ico-char"></span>수수료</a></li>
+                        <li><a href="/" title="지점찾기"><span class="ico-store"></span>지점찾기</a></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <div id="content-wrapper" class="container">
+            <div class="row">
+                <div class="current-location col-md-12">
+                    <ol class="clearfix">
+                        <li><a href="/" title="home"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a></li>
+                        <li class="arr">&gt;</li>
+                        <li><a href="/" title="관리">관리</a></li>
+                        <li class="arr">&gt;</li>
+                        <li><a href="/" title="메뉴관리">메뉴관리</a></li>
+                    </ol>
+                </div>
+                <div class="clearfix">
+                    <nav class="left-navi col-md-2">
+                        <h2>관리</h2>
+                        <ol>
+                            <li>
+                                <a href="/" title="추천상품 관리">추천상품 관리<span class="glyphicon glyphicon-menu-up" aria-hidden="true"></span></a>
+                                <ol class="sub-list">
+                                    <li class="select"><a href="/" title="상품정보 조회">상품정보 조회</a></li>
+                                    <li><a href="/" title="상품등록">상품등록</a></li>
+                                </ol>
+                            </li>
+                            <li>
+                                <a href="/" title="이벤트 관리">이벤트 관리<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></a>
+                                <ol class="sub-list">
+                                    <li><a href="/" title="이벤트 조회">이벤트 조회</a></li>
+                                    <li><a href="/" title="이벤트 등록">이벤트 등록</a></li>
+                                </ol>
+                            </li>
+                            <li class="select">
+                                <a href="/" title="메뉴관리">메뉴관리</a>
+                            </li>
+                            <li>
+                                <a href="/" title="배경이미지설정">배경이미지설정</a>
+                            </li>
+                            <li>
+                                <a href="/" title="1:1 문의 답변">1:1 문의 답변</a>
+                            </li>
+                            <li>
+                                <a href="/" title="통계">통계<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></a>
+                                <ol class="sub-list">
+                                    <li><a href="/" title="Dashboard">Dashboard</a></li>
+                                    <li><a href="/" title="방문현황">방문현황</a></li>
+                                    <li><a href="/" title="회원분석">회원분석</a></li>
+                                </ol>
+                            </li>
+                        </ol>
+                    </nav>
+                    <div class="cont-area col-md-10">
+                        <div class="tree-menu-set">
+                            <h3>메뉴관리</h3>
+                            <!-- to dev -> 제일 상위 뎁스는 처음 시작과 함께 보이기 위해서 opened : true 속성값 줘야 합니다. -->
+
+                            <div class="tree-menu clearfix">
+                                <div class="menu-edit">
+                                    <div class="menu-edit-list">
+                                        <!-- <ul>
+                                            <li rel="root" data-jstree='{ "selected" : true, "opened" : true, "type" : root }'>저축
+                                                <ul>
+                                                    <li>예금</li>
+                                                    <li>적금</li>
+                                                    <li>MMDA</li>
+                                                    <li>주택청약</li>
+                                                </ul>
+                                            </li>
+                                            <li rel="root" data-jstree='{ "opened" : true, "type" : root }'>대출
+                                                <ul>
+                                                    <li>신용대출</li>
+                                                    <li>담보대출</li>
+                                                    <li>맞춤대출</li>
+                                                </ul>
+                                            </li>
+                                            <li rel="root" data-jstree='{ "opened" : true, "type" : root }'>보험
+                                                <ul>
+                                                    <li>실손보험</li>
+                                                    <li>정기보험</li>
+                                                    <li>연금/저축보험</li>
+                                                    <li>자동차보험</li>
+                                                </ul>
+                                            </li>
+                                        </ul> -->
+                                    </div>
+                                    <div class="menu-control">
+                                        <button type="button" class="btn btn-default btn-sm" id="add-node" onclick="tm_add();">+ 메뉴추가</button>
+                                        <button type="button" class="btn btn-default btn-sm" id="remove-node" onclick="tm_delete();">- 메뉴삭제</button>
+                                        <button type="button" class="btn btn-default btn-sm" id="move-up" onclick="tm_move('up');">
+                                            <span class="glyphicon glyphicon-triangle-top" aria-hidden="true"></span>
+                                        </button>
+                                        <button type="button" class="btn btn-default btn-sm" id="move-down" onclick="tm_move('down');">
+                                            <span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="menu-attr">
+                                    <form id="" method="post" action="/" data-toggle="validator" role="form">
+                                        <table class="table">
+                                            <caption>메뉴관리</caption>
+                                            <colgroup>
+                                                <col width="130px;"></col>
+                                                <col width="*"></col>
+                                            </colgroup>
+                                            <thead></thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th>메뉴명</th>
+                                                    <td>
+                                                        <div class="form-group">
+                                                            <input type="text" id="menu-name" class="form-control" placeholder="메뉴명을 입력하세요." aria-label="메뉴명을 입력하세요." />
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>툴팁</th>
+                                                    <td>
+                                                        <input type="text" id="tool-tip" class="form-control" placeholder="툴팁을 입력하세요." aria-label="툴팁을 입력하세요." />
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>링크설정</th>
+                                                    <td>
+                                                        <input type="text" id="link-url-set" class="form-control" placeholder="링크값을 입력하세요." aria-label="링크값을 입력하세요." />
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>메뉴 공개 여부</th>
+                                                    <td class="menu-open">
+                                                        <label class="radio-inline"><input type="radio" name="tm-public" id="tm-open" value="" />공개</label>
+                                                        <label class="radio-inline"><input type="radio" name="tm-public" id="tm-close" value="" />비공개(관리자만 공개)</label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th rowspan="2">접근권한</th>
+                                                    <td class="access-right">
+                                                        <div class="radio">
+                                                            <label for="none-member"><input type="radio" id="none-member" name="access-check" />비회원</label>
+                                                        </div>
+                                                        <div class="radio">
+                                                            <label for="associate-member"><input type="radio" id="associate-member" name="access-check" />준회원(YelloPASS)</label>
+                                                        </div>
+                                                        <div class="radio">
+                                                            <label for="regular-member"><input type="radio" id="regular-member" name="access-check" />정회원(mopic)</label>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="checkbox">
+                                                            <label for="ch-menu-apply"><input type="checkbox" id="ch-menu-apply" name="ch-menu-apply">하위메뉴 모두 적용</label>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="submit-area">
+                                            <button type="submit" id="tm-attr-save" name="tm-attr-save" onclick="tm_attr_modify();">수정</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <ul class="clearfix">
+                <li><a href="/" title="Mo-Pic란?">Mo-Pic란?</a></li>
+                <li class="vl"><span>|</span></li>
+                <li><a href="/" title="서비스약관">서비스약관</a></li>
+                <li class="vl"><span>|</span></li>
+                <li><a href="/" title="개인정보취급방침">개인정보취급방침</a></li>
+                <li class="vl"><span>|</span></li>
+                <li><a href="/" title="Yello Financial Group">Yello Financial Group</a></li>
+            </ul>
+        </footer>
+        <script src="/lib/jquery/dist/jquery.min.js"></script>
+        <!-- file upload plugin -->
+        <script src="/lib/bootstrap-fileinput/js/plugins/canvas-to-blob.min.js" type="text/javascript"></script>
+        <script src="/lib/bootstrap-fileinput/js/fileinput.min.js"></script>
+        <!-- datepicker plugin -->
+        <script src="/lib/moment/min/moment-with-locales.js"></script>  
+        <script src="/lib/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+        <!-- text editor plugin -->
+        <script src="/lib/summernote/dist/summernote.min.js"></script>
+        <!-- tree menu editor plugin -->
+        <script src="/lib/jstree/dist/jstree.min.js"></script>
+
+        <script src="/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="/dist/static/scripts/admin-ui.js"></script>
+
+        <script type="text/javascript">
+            //******************** 메뉴 변경이 있을 경우에 어떻게 데이타 전달 할지 의논 필요 ********************//
+
+            var tree_node_list = 
+            [
+                { 
+                    "id" : "f1", 
+                    "text" : "저축",
+                    "state" : {"opened" : true, "selected" : true },
+                    "type" : "folder",
+                    "data" : { 
+                        "menu_name" : "저축",
+                        "tool_tip" : "저축",
+                        "html" : "저축주소",
+                        "open" : "true",
+                        "access" : "1",
+                        "under_menu" : "true"
+                    },
+                    "children" : [ 
+                        { "id" : "f1_1", "text" : "예금", "type" : "file", "data" :{ 
+                            "menu_name" : "예금",
+                            "tool_tip" : "예금",
+                            "html" : "예금주소",
+                            "open" : "true",
+                            "access" : "0"
+                         } },
+                        { "id" : "f1_2", "text" : "적금", "type" : "file", "data" :{ 
+                            "menu_name" : "적금",
+                            "tool_tip" : "적금",
+                            "html" : "적주소",
+                            "open" : "true",
+                            "access" : "1"
+                         } },
+                        { "id" : "f1_3", "text" : "MMDA", "type" : "file", "data" :{ 
+                            "menu_name" : "MMDA",
+                            "tool_tip" : "MMDA",
+                            "html" : "MMDA주소",
+                            "open" : "true",
+                            "access" : "2"
+                         } },
+                        { "id" : "f1_4", "text" : "주택청약", "type" : "file", "data" :{ 
+                            "menu_name" : "주택청약",
+                            "tool_tip" : "주택청약",
+                            "html" : "주택청약주소",
+                            "open" : "true",
+                            "access" : "0"
+                         } }
+                    ] 
+                }, 
+                { 
+                    "id" : "f2", 
+                    "text" : "대출", 
+                    "state" : {"opened" : true },
+                    "type" : "folder",
+                    "data" : { 
+                        "menu_name" : "대출",
+                        "tool_tip" : "대출",
+                        "html" : "대출주소",
+                        "open" : "true",
+                        "access" : "0",
+                        "under_menu" : "true"
+                    },
+                    "children" : [ 
+                        { "id" : "f2_1", "text" : "신용대출", "type" : "file", "data" :{ 
+                            "menu_name" : "신용대출",
+                            "tool_tip" : "신용대출",
+                            "html" : "신용대출주소",
+                            "open" : "true",
+                            "access" : "0"
+                        } },
+                        { "id" : "f2_2", "text" : "담보대출", "type" : "file", "data" :{ 
+                            "menu_name" : "담보대출",
+                            "tool_tip" : "담보대출",
+                            "html" : "담보대출주소",
+                            "open" : "true",
+                            "access" : "0"
+                        } },
+                        { "id" : "f2_3", "text" : "맞춤대출", "type" : "file", "data" :{ 
+                            "menu_name" : "맞춤대출",
+                            "tool_tip" : "맞춤대출",
+                            "html" : "맞춤대출주소",
+                            "open" : "true",
+                            "access" : "0"
+                        } }
+                    ] 
+                },
+                { 
+                    "id" : "f3", 
+                    "text" : "보험",
+                    "state" : {"opened" : true },
+                    "type" : "folder",
+                    "data" : { 
+                        "menu_name" : "보험",
+                        "tool_tip" : "보험",
+                        "html" : "보험주소",
+                        "open" : "true",
+                        "access" : "0",
+                        "under_menu" : "true"
+                    },
+                    "children" : [ 
+                        { "id" : "f3_1", "text" : "실손보험", "type" : "file", "data" :{ 
+                            "menu_name" : "실손보험",
+                            "tool_tip" : "실손보험",
+                            "html" : "실손보험주소",
+                            "open" : "true",
+                            "access" : "0"
+                        } },
+                        { "id" : "f3_2", "text" : "정기보험", "type" : "file", "data" :{ 
+                            "menu_name" : "정기보험",
+                            "tool_tip" : "정기보험",
+                            "html" : "정기보험주소",
+                            "open" : "true",
+                            "access" : "0"
+                        } },
+                        { "id" : "f3_3", "text" : "연금/저축보험", "type" : "file", "data" :{ 
+                            "menu_name" : "연금/저축보험",
+                            "tool_tip" : "연금/저축보험",
+                            "html" : "연금/저축보험주소",
+                            "open" : "true",
+                            "access" : "0"
+                        } },
+                        { "id" : "f3_4", "text" : "자동차보험", "type" : "file", "data" :{ 
+                            "menu_name" : "자동차보험",
+                            "tool_tip" : "자동차보험",
+                            "html" : "자동차보험주소",
+                            "open" : "true",
+                            "access" : "0"
+                        } }
+                    ] 
+                }
+            ];
+
+            var current_tree_data = JSON.parse(JSON.stringify( tree_node_list ));
+            var tree_menu = $('.menu-edit-list');
+            var current_level = 1;
+            var node_str = '';
+            var depth1 = 1;
+            var depth2 = null;
+            var attr_status = false;    //우측 메뉴 속성값 정의시에는 메뉴추가,삭제,이동 안되게 
+            $(function() {
+                tree_menu.jstree({
+                    "core" : 
+                    {
+                        "check_callback" : function(operation, node, node_parent, node_position, more) {
+                            if (operation == 'move_node') {
+                                if (node_parent.parent == null) {
+                                    return false;
+                                }
+                            }
+                        },
+                        "data": tree_node_list
+                    },
+                    rules : {
+                        valid_children : [ "root" ]
+                    },
+                    types : {
+                        "default" : {
+                            renameable : false,
+                            icon : {
+                                image : false
+                            }
+                        },
+                        "root" : {
+                            valid_children : [ "folder" ],
+                            icon : { 
+                                image : false
+                            }
+                        },
+                        "folder" : {
+                            valid_children : [ "file" ],
+                            icon : { 
+                                image : false
+                            }
+                        },
+                        "file" : {
+                            valid_children : "none",
+                            max_children : 0,
+                            max_depth :0,
+                            icon : { 
+                                image : false
+                            }
+                        }
+                    }
+                })
+                .on("changed.jstree", function (e, data) {
+                    tm_attr_set();
+                }).bind("select_node.jstree",function(e,data) {
+                    current_level = data.node.parents.length;
+                    if ( data.node.data['id'] == undefined ){
+                        node_str = data.selected[0];    
+                    } else {
+                        node_str = data.node.data['id'];
+                    }
+
+                    _f = node_str.split('_')[0];
+                    depth1 = _f.substr(1, _f.length-1);
+                    if ( current_level == 1){
+                        depth2 = null;
+                    } else {
+                        _s = node_str.split('_')[1];
+                        depth2 = $('#' + data.node.id).index()+1;
+                    }
+                }).bind("move_node.jstree",function(e,data) {
+                    if ( data.parent == '#' ) { 
+                        return false; 
+                    } else {
+                        var new_data = tree_node_list[data.parent.substr(1)-1].children[data.position];
+                        var old_data = tree_node_list[data.parent.substr(1)-1].children[data.old_position];
+                        current_tree_data[data.parent.substr(1)-1].children[data.old_position] = old_data;
+                        current_tree_data[data.parent.substr(1)-1].children[data.position] = new_data;
+                    }
+                }).bind("delete_node.jstree",function(e,data) {
+                    var n = data.node.id.substr(-1)-1;
+                    current_tree_data[data.parent.substr(1)-1].children.splice(n,1);
+                    depth2 = null;
+                }).bind("create_node.jstree",function(e,data) {
+                    
+                }).bind("rename_node.jstree",function(e,data) {
+                    tm_attr_set(false);
+                })
+            });
+
+        function tm_add() {
+            if ( attr_status ) { return false; }
+            var tree = tree_menu.jstree(true),
+                current_node = tree.get_selected();
+            if(!current_node.length || current_level == 2 ) { return false; }
+            current_node = current_node[0];
+            var s_count = Number(tree.get_node(current_node).children.length)+1;
+            //2depth menu 생성시 기본 데이타 세팅값
+            var node_data = { 
+                "id" : "f" + depth1 + "_" + s_count, 
+                "text" : "New node", 
+                "type" : "file",
+                "data" :{ 
+                    "menu_name" : "New node",
+                    "tool_tip" : "New node",
+                    "html" : "/",
+                    "open" : "true",
+                    "access" : "0"
+                } 
+            };
+            current_node = tree.create_node(current_node, {
+                "type":"file",
+                "data": node_data
+            });
+            current_tree_data[depth1-1].children.push(node_data);
+            tree.deselect_all();
+            tree.select_node(current_node);
+            tm_attr_set(true);
+        };
+
+        function tm_delete() {
+            if ( attr_status ) { return false; }
+            var tree = tree_menu.jstree(true),
+                current_node = tree.get_selected();
+            if(!current_node.length || current_level == 1 ) { return false; }
+            var parent_node = tree.get_parent(current_node);
+            tree.delete_node(current_node);
+            tree.select_node(parent_node);
+        };
+
+        function tm_move(dir){
+            if ( attr_status ) { return false; }
+            var tree = tree_menu.jstree(true),
+                current_node = tree.get_selected(false);
+                node = null;
+                //2depth 일때만 이동가능
+                if ( current_level > 1 ){
+                    if ( dir == 'up' ){
+                        node = tree.get_prev_dom(current_node);
+                        tree.move_node(current_node, node, "before");
+                    } else {
+                        node = tree.get_next_dom(current_node);
+                        tree.move_node(current_node, node, "after");
+                    }        
+                }
+        }
+
+        //각 노드 속성값 정의 테이블 세팅
+        function tm_attr_set(bool){
+            attr_status = bool;
+            var attr_value = null;
+            var public_open = null;
+            if ( depth2 != null ){
+                attr_value = current_tree_data[depth1-1].children[depth2-1];
+            } else {
+                attr_value = current_tree_data[depth1-1];
+            }
+            $('#menu-name').attr('value', attr_value['data']['menu_name']).val(attr_value['data']['menu_name']);
+            $('#tool-tip').attr('value', attr_value['data']['tool_tip']).val(attr_value['data']['tool_tip']);
+            $('#link-url-set').attr('value', attr_value['data']['html']).val(attr_value['data']['html']);
+
+            public_open = attr_value['data']['open'] == 'true' ? 0 : 1;
+            $("input[name='tm-public']").prop('checked',false).eq(public_open).prop('checked', 'checked');
+            
+            $(".access-right input[type='radio']").prop('checked',false).eq(attr_value['data']['access']).prop('checked', 'checked');
+            
+            if ( depth2 != null ){
+                $('#ch-menu-apply').attr('disabled', true);
+            } else {
+                $('#ch-menu-apply').attr({
+                    'disabled' : false,
+                    'checked' : true
+                });
+            }
+        }
+
+        //메뉴 속성값 수정 후 저장시 
+        function tm_attr_modify(){
+            var menu_name = $('#menu-name').val();
+            var tool_tip = $('#tool-tip').val();
+            var link_url = $('#link-url-set').val();
+            var public_open = $("input[name='tm-public']").eq(0).prop('checked') == true ? true : false;
+            //var access_right =             
+
+            if ( menu_name == '' || tool_tip == '' || link_url == '' ){
+
+            } else {
+                if ( depth2 == null ){
+                    var under_menu = $("input[name='tm-public']").prop('checked');
+                }    
+            }
+
+            
+
+            /*
+            "data" : { 
+                "menu_name" : "저축",
+                "tool_tip" : "저축",
+                "html" : "저축주소",
+                "open" : "true",
+                "access" : "0",
+                "under_menu" : "true"
+            }
+            */
+        }
+
+        function fill_check(){
+            var count = 0;
+            while( count < 3 ){
+                count ++;
+
+            }
+        }
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

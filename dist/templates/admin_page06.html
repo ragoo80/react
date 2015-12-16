@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>금융 쿠차 모픽 관리자</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="keyword" content="금융, 저축, 보험, 대출, 카드, P2P, 환율, 금융 계산기, 수수료 " />
+        <meta name="description" content="yfg 모픽" />
+        <meta name="author" content="yfg" />
+        <meta name="publisher" content="yfg" />
+        <meta name="robots" content="ALL" /> 
+        <meta name="robots" content="INDEX, FOLLOW" />
+        
+        <link type="text/css" rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css" />
+        <link type="text/css" rel="stylesheet" href="/lib/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css" />
+        <link type="text/css" rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css" />
+        <link type="text/css" rel="stylesheet" href="/lib/summernote/dist/summernote.css" />
+        <link type="text/css" rel="stylesheet" href="/lib/bootstrap-fileinput/css/fileinput.min.css" media="all" />
+        <link type="text/css" rel="stylesheet" href="/dist/static/css/admin-ui.css" />
+    </head>
+
+    <body id="admin">
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div id="header_wrapper" class="clearfix">
+                    <nav id="gnb">
+                        <ul class="gnb-list clearfix">
+                            <li><a href="/" title="관리">관리<span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span></a></li>
+                            <li class="vl">|</li>
+                            <li><a href="/" title="이벤트">이벤트</a></li>
+                            <li class="vl">|</li>
+                            <li><a href="/" title="고객센터">고객센터<span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span></a></li>
+                        </ul>
+                        <ol class="gnb-sub-list">
+                            <li><a href="/" title="추천상품 관리">추천상품 관리</a></li>
+                            <li><a href="/" title="이벤트 관리">이벤트 관리</a></li>
+                            <li><a href="/" title="1:1 문의 답변">1:1 문의 답변</a></li>
+                            <li><a href="/" title="통계">통계</a></li>
+                        </ol>
+                        <ol class="gnb-sub-list"></ol>
+                        <ol class="gnb-sub-list">
+                            <li><a href="/" title="고객센터1">고객센터1</a></li>
+                            <li><a href="/" title="고객센터2">고객센터2</a></li>
+                        </ol>
+                    </nav>
+                </div>
+                <h1><a href="/" title="Mo-Pic"><img src="/dist/static/images/common/mp_logo.png" alt="mopic" width="114"></a></h1>
+                <div class="quick_link clearfix">
+                    <ol>
+                        <li><a href="/" title="계산기"><span class="ico-cal"></span>계산기</a></li>
+                        <li><a href="/" title="수수료"><span class="ico-char"></span>수수료</a></li>
+                        <li><a href="/" title="지점찾기"><span class="ico-store"></span>지점찾기</a></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <div id="content-wrapper" class="container">
+            <div class="row">
+                <div class="current-location col-md-12">
+                    <ol class="clearfix">
+                        <li><a href="/" title="home"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a></li>
+                        <li class="arr">&gt;</li>
+                        <li><a href="/" title="관리">관리</a></li>
+                        <li class="arr">&gt;</li>
+                        <li><a href="/" title="1:1 문의 답변">1:1 문의 답변</a></li>
+                    </ol>
+                </div>
+                <div class="clearfix">
+                    <nav class="left-navi col-md-2">
+                        <h2>관리</h2>
+                        <ol>
+                            <li>
+                                <a href="/" title="추천상품 관리">추천상품 관리<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></a>
+                                <ol class="sub-list">
+                                    <li><a href="/" title="상품정보 조회">상품정보 조회</a></li>
+                                    <li><a href="/" title="상품등록">상품등록</a></li>
+                                </ol>
+                            </li>
+                            <li>
+                                <a href="/" title="이벤트 관리">이벤트 관리<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></a>
+                                <ol class="sub-list">
+                                    <li><a href="/" title="이벤트 조회">이벤트 조회</a></li>
+                                    <li><a href="/" title="이벤트 등록">이벤트 등록</a></li>
+                                </ol>
+                            </li>
+                            <li>
+                                <a href="/" title="메뉴관리">메뉴관리</a>
+                            </li>
+                            <li>
+                                <a href="/" title="배경이미지설정">배경이미지설정</a>
+                            </li>
+                            <li class="select">
+                                <a href="/" title="1:1 문의 답변">1:1 문의 답변</a>
+                            </li>
+                            <li>
+                                <a href="/" title="통계">통계<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></a>
+                                <ol class="sub-list">
+                                    <li><a href="/" title="Dashboard">Dashboard</a></li>
+                                    <li><a href="/" title="방문현황">방문현황</a></li>
+                                    <li><a href="/" title="회원분석">회원분석</a></li>
+                                </ol>
+                            </li>
+                        </ol>
+                    </nav>
+                    <div class="cont-area col-md-10">
+                        <div class="faq-list">
+                            <div class="table-list">
+                                <div class="table-list-header clearfix">
+                                    <h3>1:1 문의 답변</h3>
+                                    <div class="list-sort">
+                                        <ul class="clearfix">
+                                            <li class="active"><a href="/">전체</a></li>
+                                            <li class="vl">|</li>
+                                            <li><a href="/">답변완료</a></li>
+                                            <li class="vl">|</li>
+                                            <li>답변미완료</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <table class="faq-table table">
+                                <caption>1:1 문의 답변</caption>
+                                <colgroup>
+                                    <col width="90px;"></col>
+                                    <col width="90px;"></col>
+                                    <col width="*;"></col>
+                                    <col width="105px;"></col>
+                                    <col width="98px;"></col>
+                                    <col width="50px;"></col>
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>처리상태</th>
+                                        <th>문의유형</th>
+                                        <th>제목</th>
+                                        <th>아이디</th>
+                                        <th>작성일</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="reply">답변미완료</td>
+                                        <td>저축</td>
+                                        <td class="title"><span class="tit">주택청약종합 저축 세전이자를 어떻게 계산하나요?</span></td>
+                                        <td>yfg4908</td>
+                                        <td>2015-12-10</td>
+                                        <td><span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span></td>
+                                    </tr>
+                                    <tr class="ques-cont">
+                                        <td colspan="6">
+                                            <div class="cont-box">
+                                                <div class="user-attach">
+                                                    <div class="add-file">
+                                                        <span class="txt">첨부파일 2개(95KB)</span><a href="/" title="모두저장" class="all-save">모두저장</a>
+                                                    </div>
+                                                    <ol class="img-list">
+                                                        <li><a href="/" title="이미지 이름">01.jpg<span class="size">40KB</span></a></li>
+                                                        <li><a href="/" title="이미지 이름">02.jpg<span class="size">55KB</span></a></li>
+                                                    </ol>
+                                                    <div class="img-preview">
+                                                        <p>이미지 미리보기</p>
+                                                        <ol class="thumbnail">
+                                                            <li>
+                                                                <img src="/dist/static/images/dummy/faq_img00.png" alt="샘플 이미지" />
+                                                                <p class="name">01.jpg</p>
+                                                            </li>
+                                                            <li>
+                                                                <img src="/dist/static/images/dummy/faq_img00.png" alt="샘플 이미지" />
+                                                                <p class="name">02.jpg</p>
+                                                            </li>
+                                                        </ol>
+                                                    </div>
+                                                </div>
+                                                <p class="question">
+                                                    변액보험에 대해서 들어봤는데요 변액보험이 무엇이며 어떤 특징이 있는지 궁금합니다.<br/>
+                                                    또 변액과 변액이 아닌보험의 차이점 또한 궁금합니다.
+                                                </p>
+                                                <div class="b">
+                                                    <button type="button" id="pro-regiser-save" name="pro-regiser-save">답변하기</button>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="reply">답변미완료</td>
+                                        <td>보험</td>
+                                        <td class="title"><span class="tit">변액보험이란 어떤 상품이며, 어떤 특징이 있나요?</span></td>
+                                        <td>yfg4908</td>
+                                        <td>2015-11-18</td>
+                                        <td><span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span></td>
+                                    </tr>
+                                    <tr class="ques-cont">
+                                        <td colspan="6">
+                                            <div class="cont-box">
+                                                질문 내용 어쩌고 저쩌고 
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <!--
+                                    <tr>
+                                        <td class="reply">답변미완료</td>
+                                        <td>보험</td>
+                                        <td class="title"><span class="tit">변액보험이란 어떤 상품이며, 어떤 특징이 있나요?</span></td>
+                                        <td>yfg4908</td>
+                                        <td>2015-11-18</td>
+                                        <td><span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="reply">답변미완료</td>
+                                        <td>보험</td>
+                                        <td class="title"><span class="tit">변액보험이란 어떤 상품이며, 어떤 특징이 있나요?</span></td>
+                                        <td>yfg4908</td>
+                                        <td>2015-11-18</td>
+                                        <td><span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="reply">답변미완료</td>
+                                        <td>보험</td>
+                                        <td class="title"><span class="tit">변액보험이란 어떤 상품이며, 어떤 특징이 있나요?</span></td>
+                                        <td>yfg4908</td>
+                                        <td>2015-11-03</td>
+                                        <td><span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="reply">답변미완료</td>
+                                        <td>보험</td>
+                                        <td class="title"><span class="tit">변액보험이란 어떤 상품이며, 어떤 특징이 있나요?</span></td>
+                                        <td>yfg4908</td>
+                                        <td>2015-11-00</td>
+                                        <td><span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="reply com">답변완료</td>
+                                        <td>기타</td>
+                                        <td class="title"><span class="tit">비밀번호를 5회 잘못 입력 했습니다.</span></td>
+                                        <td>yellopass0378</td>
+                                        <td>2015-10-25</td>
+                                        <td><span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="reply com">답변완료</td>
+                                        <td>기타</td>
+                                        <td class="title"><span class="tit">변액보험이란 어떤 상품이며, 어떤 특징이 있나요?</span></td>
+                                        <td>yfg7890</td>
+                                        <td>2015-10-12</td>
+                                        <td><span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span></td>
+                                    </tr>
+                                    -->
+                                </tbody>
+                            </table>
+                            <div class="board-paging">
+                                <ol>
+                                    <li class="prev"><a href="/" title="이전페이지">이전페이지</a></li><li class="active"><a href="/" title="1페이지">1</a></li><li><a href="/" title="2페이지">2</a></li><li><a href="/" title="3페이지">3</a></li><li><a href="/" title="4페이지">4</a></li><li><a href="/" title="5페이지">5</a></li><li class="next"><a href="/" title="다음페이지">다음페이지</a></li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <ul class="clearfix">
+                <li><a href="/" title="Mo-Pic란?">Mo-Pic란?</a></li>
+                <li class="vl"><span>|</span></li>
+                <li><a href="/" title="서비스약관">서비스약관</a></li>
+                <li class="vl"><span>|</span></li>
+                <li><a href="/" title="개인정보취급방침">개인정보취급방침</a></li>
+                <li class="vl"><span>|</span></li>
+                <li><a href="/" title="Yello Financial Group">Yello Financial Group</a></li>
+            </ul>
+        </footer>
+        <script src="/lib/jquery/dist/jquery.min.js"></script>
+        <!-- file upload plugin -->
+        <script src="/lib/bootstrap-fileinput/js/plugins/canvas-to-blob.min.js" type="text/javascript"></script>
+        <script src="/lib/bootstrap-fileinput/js/fileinput.min.js"></script>
+        <!-- datepicker plugin -->
+        <script src="/lib/moment/min/moment-with-locales.js"></script>  
+        <script src="/lib/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+        <!-- text editor plugin -->
+        <script src="/lib/summernote/dist/summernote.min.js"></script>
+
+        <script src="/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="/dist/static/scripts/admin-ui.js"></script>
+
+        <script type="text/javascript">
+            $(function() {
+                // 상품 이미지 업로드 - http://plugins.krajee.com/file-input
+                $("#main-bg-upload").fileinput({
+                    browseLabel: "이미지 등록",
+                    browseIcon: "<i class=\"glyphicon\"></i> ",
+                    uploadUrl: "/",
+                    maxFileCount: 10,
+                    allowedFileTypes: ["jpg", "gif", "png"]
+                });
+            });
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

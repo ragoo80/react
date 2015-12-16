@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>금융 쿠차 모픽 관리자</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="keyword" content="금융, 저축, 보험, 대출, 카드, P2P, 환율, 금융 계산기, 수수료 " />
+        <meta name="description" content="yfg 모픽" />
+        <meta name="author" content="yfg" />
+        <meta name="publisher" content="yfg" />
+        <meta name="robots" content="ALL" /> 
+        <meta name="robots" content="INDEX, FOLLOW" />
+        
+        <link type="text/css" rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css" />
+        <link type="text/css" rel="stylesheet" href="/lib/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css" />
+        <link type="text/css" rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css" />
+        <link type="text/css" rel="stylesheet" href="/lib/summernote/dist/summernote.css" />
+        <link type="text/css" rel="stylesheet" href="/lib/bootstrap-fileinput/css/fileinput.min.css" media="all" />
+        <link type="text/css" rel="stylesheet" href="/dist/static/css/admin-ui.css" />
+    </head>
+
+    <body id="admin">
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div id="header_wrapper" class="clearfix">
+                    <nav id="gnb">
+                        <ul class="gnb-list clearfix">
+                            <li><a href="/" title="관리">관리<span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span></a></li>
+                            <li class="vl">|</li>
+                            <li><a href="/" title="이벤트">이벤트</a></li>
+                            <li class="vl">|</li>
+                            <li><a href="/" title="고객센터">고객센터<span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span></a></li>
+                        </ul>
+                        <ol class="gnb-sub-list">
+                            <li><a href="/" title="추천상품 관리">추천상품 관리</a></li>
+                            <li><a href="/" title="이벤트 관리">이벤트 관리</a></li>
+                            <li><a href="/" title="1:1 문의 답변">1:1 문의 답변</a></li>
+                            <li><a href="/" title="통계">통계</a></li>
+                        </ol>
+                        <ol class="gnb-sub-list"></ol>
+                        <ol class="gnb-sub-list">
+                            <li><a href="/" title="고객센터1">고객센터1</a></li>
+                            <li><a href="/" title="고객센터2">고객센터2</a></li>
+                        </ol>
+                    </nav>
+                </div>
+                <h1><a href="/" title="Mo-Pic"><img src="/dist/static/images/common/mp_logo.png" alt="mopic" width="114"></a></h1>
+                <div class="quick_link clearfix">
+                    <ol>
+                        <li><a href="/" title="계산기"><span class="ico-cal"></span>계산기</a></li>
+                        <li><a href="/" title="수수료"><span class="ico-char"></span>수수료</a></li>
+                        <li><a href="/" title="지점찾기"><span class="ico-store"></span>지점찾기</a></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <div id="content-wrapper" class="container">
+            <div class="row">
+                <div class="current-location col-md-12">
+                    <ol class="clearfix">
+                        <li><a href="/" title="home"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a></li>
+                        <li class="arr">&gt;</li>
+                        <li><a href="/" title="관리">관리</a></li>
+                        <li class="arr">&gt;</li>
+                        <li><a href="/" title="추천상품 관리">추천상품 관리</a></li>
+                        <li class="arr">&gt;</li>
+                        <li><a href="/" title="상품등록">상품등록</a></li>
+                    </ol>
+                </div>
+                <div class="clearfix">
+                    <nav class="left-navi col-md-2">
+                        <h2>관리</h2>
+                        <ol>
+                            <li class="select">
+                                <a href="/" title="추천상품 관리">추천상품 관리<span class="glyphicon glyphicon-menu-up" aria-hidden="true"></span></a>
+                                <ol class="sub-list">
+                                    <li><a href="/" title="상품정보 조회">상품정보 조회</a></li>
+                                    <li class="select"><a href="/" title="상품등록">상품등록</a></li>
+                                </ol>
+                            </li>
+                            <li>
+                                <a href="/" title="이벤트 관리">이벤트 관리<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></a>
+                                <ol class="sub-list">
+                                    <li><a href="/" title="이벤트 조회">이벤트 조회</a></li>
+                                    <li><a href="/" title="이벤트 등록">이벤트 등록</a></li>
+                                </ol>
+                            </li>
+                            <li>
+                                <a href="/" title="메뉴관리">메뉴관리</a>
+                            </li>
+                            <li>
+                                <a href="/" title="배경이미지설정">배경이미지설정</a>
+                            </li>
+                            <li>
+                                <a href="/" title="1:1 문의 답변">1:1 문의 답변</a>
+                            </li>
+                            <li>
+                                <a href="/" title="통계">통계<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></a>
+                                <ol class="sub-list">
+                                    <li><a href="/" title="Dashboard">Dashboard</a></li>
+                                    <li><a href="/" title="방문현황">방문현황</a></li>
+                                    <li><a href="/" title="회원분석">회원분석</a></li>
+                                </ol>
+                            </li>
+                        </ol>
+                    </nav>
+                    <div class="cont-area col-md-10">
+                        <div class="form-wrap">
+                            <form id="product-register" name="product-register" method="post" action="/">
+                                <h3>상품등록</h3>
+                                <table class="table">
+                                    <caption>상품등록</caption>
+                                    <colgroup>
+                                        <col width="130px;"></col>
+                                        <col width="*"></col>
+                                        <col width="*"></col>
+                                    </colgroup>
+                                    <thead></thead>
+                                    <tbody>
+                                        <tr>
+                                            <th>카테고리명</th>
+                                            <td>
+                                                <div class="field-line">
+                                                    <div class="dropdown" style="margin-right:10px;">
+                                                      <button class="btn btn-default dropdown-toggle" type="button" id="big-cate-name-drop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                                        대분류
+                                                        <span class="caret"></span>
+                                                      </button>
+                                                      <ul class="dropdown-menu" aria-labelledby="big-cate-name-drop">
+                                                        <li><a href="/">저축</a></li>
+                                                        <li><a href="/">대출</a></li>
+                                                        <li><a href="/">보험</a></li>
+                                                        <li><a href="/">카드</a></li>
+                                                        <li><a href="/">P2P</a></li>
+                                                        <li><a href="/">환율</a></li>
+                                                      </ul>
+                                                    </div>
+                                                    <div class="dropdown">
+                                                      <button class="btn btn-default dropdown-toggle" type="button" id="medi-cate-name-drop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                                        중분류
+                                                        <span class="caret"></span>
+                                                      </button>
+                                                      <ul class="dropdown-menu" aria-labelledby="medi-cate-name-drop">
+                                                        <li><a href="/">저축</a></li>
+                                                        <li><a href="/">대출</a></li>
+                                                        <li><a href="/">보험</a></li>
+                                                        <li><a href="/">카드</a></li>
+                                                        <li><a href="/">P2P</a></li>
+                                                        <li><a href="/">환율</a></li>
+                                                      </ul>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>상품명</th>
+                                            <td>
+                                                <div class="input-group"><input type="text" maxlength="100" class="form-control" placeholder="상품명을 입력하세요." aria-label="상품명을 입력하세요."> <span class="input-group-addon">0/100</span></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>상품 상세정보</th>
+                                            <td><div class="text-editor"></div></td>
+                                        </tr>
+                                        <tr>
+                                            <th>상품 이미지</th>
+                                            <td>
+                                                <label for="pro-img-upload"><input id="pro-img-upload" name="pro-img-upload" type="file" class="file-loading" /></label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>등록상태</th>
+                                            <td>
+                                                <div class="dropdown">
+                                                  <button class="btn btn-default dropdown-toggle" type="button" id="register-check-drop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                                    등록 중
+                                                    <span class="caret"></span>
+                                                  </button>
+                                                  <ul class="dropdown-menu" aria-labelledby="register-check-drop">
+                                                    <li><a href="/">등록 중</a></li>
+                                                    <li><a href="/">등록 중지</a></li>
+                                                  </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>게시기간</th>
+                                            <td class="dp-date clearfix">
+                                                <div class="date-pic-group clearfix">
+                                                    <div class="form-group">
+                                                        <div class='input-group date' id='from-dpic'>
+                                                            <input type='text' class="form-control" />
+
+                                                            <span class="input-group-addon">
+                                                                <span class="glyphicon glyphicon-calendar"></span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group hv">-</div>
+                                                    <div class="form-group">
+                                                        <div class='input-group date' id='to-dpic'>
+                                                            <input type='text' class="form-control" />
+                                                            <span class="input-group-addon">
+                                                                <span class="glyphicon glyphicon-calendar"></span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="checkbox no-limit">
+                                                    <label for="no-limit-date"><input type="checkbox" id="no-limit-date" name="no-limit-date" />기한 없음</label>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="submit-area">
+                                    <a class="btn btn-default" href="/" role="button" style="margin-right:10px;">미리보기</a><button type="submit" id="pro-regiser-save" name="pro-regiser-save">저장</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <ul class="clearfix">
+                <li><a href="/" title="Mo-Pic란?">Mo-Pic란?</a></li>
+                <li class="vl"><span>|</span></li>
+                <li><a href="/" title="서비스약관">서비스약관</a></li>
+                <li class="vl"><span>|</span></li>
+                <li><a href="/" title="개인정보취급방침">개인정보취급방침</a></li>
+                <li class="vl"><span>|</span></li>
+                <li><a href="/" title="Yello Financial Group">Yello Financial Group</a></li>
+            </ul>
+        </footer>
+        <script src="/lib/jquery/dist/jquery.min.js"></script>
+        <!-- file upload plugin -->
+        <script src="/lib/bootstrap-fileinput/js/plugins/canvas-to-blob.min.js" type="text/javascript"></script>
+        <script src="/lib/bootstrap-fileinput/js/fileinput.min.js"></script>
+        <!-- datepicker plugin -->
+        <script src="/lib/moment/min/moment-with-locales.js"></script>  
+        <script src="/lib/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+        <!-- text editor plugin -->
+        <script src="/lib/summernote/dist/summernote.min.js"></script>
+
+        <script src="/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="/dist/static/scripts/admin-ui.js"></script>
+
+        <script type="text/javascript">
+            $(function() {
+                //상품 상세 정보 editor - http://summernote.org/getting-started
+                $('.text-editor').summernote({
+                    lang: 'ko-KR',
+                    height:300
+                });
+
+                // 상품 이미지 업로드 - http://plugins.krajee.com/file-input
+                $("#pro-img-upload").fileinput({
+                    browseLabel: "이미지 찾기",
+                    browseIcon: "<i class=\"glyphicon\"></i> ",
+                    uploadUrl: "/",
+                    maxFileCount: 10,
+                    allowedFileTypes: ["jpg", "gif", "png"]
+                });
+
+                $('#from-dpic').datetimepicker();
+                $('#to-dpic').datetimepicker({
+                    useCurrent: false
+                });
+                $("#from-dpic").on("dp.change", function (e) {
+                    $('#to-dpic').data("DateTimePicker").minDate(e.date);
+                });
+                $("#to-dpic").on("dp.change", function (e) {
+                    $('#from-dpic').data("DateTimePicker").maxDate(e.date);
+                });
+            });
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

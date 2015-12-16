@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en-US">
+    <head>
+        <title>금융 쿠차 모픽 관리자</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="keyword" content="금융, 저축, 보험, 대출, 카드, P2P, 환율, 금융 계산기, 수수료 " />
+        <meta name="description" content="yfg 모픽" />
+        <meta name="author" content="yfg" />
+        <meta name="publisher" content="yfg" />
+        <meta name="robots" content="ALL" /> 
+        <meta name="robots" content="INDEX, FOLLOW" />
+        <!--<script type="text/javascript" src="/lib/modernizr/modernizr.js"></script>-->
+        <link href="/lib/iCheck/skins/minimal/_all.css" rel="stylesheet" />
+        <link rel="stylesheet" href="/lib/jquery-ui/themes/smoothness/jquery-ui.min.css" />
+        <link rel="stylesheet" href="/dist/static/css/admin-ui.css" />
+    </head>
+
+    <body id="admin">
+        <div id="header_wrapper" style="display:none;">
+            <nav id="gnb">
+                <ul>
+                    <li><a href="/" title="관리">관리</a></li>
+                    <li><a href="/" title="이벤트">이벤트</a></li>
+                    <li><a href="/" title="고객센터">고객센터</a></li>
+                </ul>
+                <ol>
+                    <li><a href="/" title="추천상품 관리">추천상품 관리</a></li>
+                    <li><a href="/" title="이벤트 관리">이벤트 관리</a></li>
+                    <li><a href="/" title="1:1 문의 답변">1:1 문의 답변</a></li>
+                    <li><a href="/" title="통계">통계</a></li>
+                </ol>
+                <ol>
+                    <li><a href="/" title="고객센터1">고객센터1</a></li>
+                    <li><a href="/" title="고객센터2">고객센터2</a></li>
+                </ol>
+            </nav>
+            <h1><a href="/" title="Mo-Pic">Mo-Pic</a></h1>
+            <div class="quick_link">
+                <ol>
+                    <li><a href="/" title="계산기">계산기</a></li>
+                    <li><a href="/" title="수수료">수수료</a></li>
+                    <li><a href="/" title="지점찾기">지점찾기</a></li>
+                </ol>
+            </div>
+        </div>
+        <div id="content-wrapper">
+            <div class="current-page" style="display:none;">
+                <ol>wef
+                    <li><a href="/" title="home">home</a></li>
+                    <li><a href="/" title="관리">관리</a></li>
+                    <li><a href="/" title="추천상품 관리">추천상품 관리</a></li>
+                    <li><a href="/" title="상품정보 조회">상품정보 조회</a></li>
+                </ol>
+            </div>
+            <div class="clearfix">
+                <nav class="left-navi" style="display:none;">
+                    <ol>
+                        <li class="select">
+                            <a href="/" title="추천상품 관리">추천상품 관리<span class="up-arr">&uarr;</span></a>
+                            <ol class="sub-list">
+                                <li><a href="/" title="상품정보 조회">상품정보 조회</a></li>
+                                <li><a href="/" title="상품등록">상품등록</a></li>
+                            </ol>
+                        </li>
+                        <li>
+                            <a href="/" title="이벤트 관리">이벤트 관리<span class="down-arr">&uarr;</span></a>
+                            <ol class="sub-list">
+                                <li><a href="/" title="이벤트 조회">이벤트 조회</a></li>
+                                <li><a href="/" title="이벤트 등록">이벤트 등록</a></li>
+                            </ol>
+                        </li>
+                        <li>
+                            <a href="/" title="메뉴관리">메뉴관리</a>
+                        </li>
+                        <li>
+                            <a href="/" title="배경이미지설정">배경이미지설정</a>
+                        </li>
+                        <li>
+                            <a href="/" title="1:1 문의 답변">1:1 문의 답변</a>
+                        </li>
+                        <li>
+                            <a href="/" title="통계">통계<span class="down-arr">&uarr;</span></a>
+                            <ol class="sub-list">
+                                <li><a href="/" title="Dashboard">Dashboard</a></li>
+                                <li><a href="/" title="방문현황">방문현황</a></li>
+                                <li><a href="/" title="회원분석">회원분석</a></li>
+                            </ol>
+                        </li>
+                    </ol>
+                </nav>
+                <div class="cont-area">
+                    <form id="" name="" method="post" action="/">
+                        <table class="">
+                            <caption>상품정보 조회</caption>
+                            <colgroup>
+                                <col style="width:20%" />
+                                <col style="width:40%" />
+                                <col style="width:40%" />
+                            </colgroup>
+                            <thead></thead>
+                            <tbody>
+                                <tr>
+                                    <th>카테고리</td>
+                                    <td colspan="2">
+                                        <label for="big-cate" style="display:none;">대분류</label>
+                                        <select name="big-cate" id="big-cate">
+                                          <option selected="selected">대분류</option>
+                                          <option>저축</option>
+                                          <option>대출</option>
+                                          <option>보험</option>
+                                          <option>카드</option>
+                                          <option>P2P</option>
+                                          <option>환율</option>
+                                        </select>
+                                        <label for="mid-cate" style="display:none;">중분류</label>
+                                        <select name="mid-cate" id="mid-cate">
+                                          <option selected="selected">중분류</option>
+                                          <option>저축</option>
+                                          <option>대출</option>
+                                          <option>보험</option>
+                                          <option>카드</option>
+                                          <option>P2P</option>
+                                          <option>환율</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>등록상태</td>
+                                    <td colspan="2">
+                                        <input type="checkbox" checked id="register-all" name="register-all" /><label for="register-all">전체</label>
+                                        <input type="checkbox" id="register-ing" name="register-ing" /><label for="register-ing">등록 중</label>
+                                        <input type="checkbox" id="register-end" name="register-end" /><label for="register-end">등록 종료</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>등록상태</td>
+                                    <td>
+                                        <ol class="register-period">
+                                            <li><a href="/" title="오늘" class="ui-state-active">오늘</a></li>
+                                            <li><a href="/" title="1주일">1주일</a></li>
+                                            <li><a href="/" title="1개월">1개월</a></li>
+                                            <li><a href="/" title="3개월">3개월</a></li>
+                                            <li><a href="/" title="6개월">6개월</a></li>
+                                            <li><a href="/" title="1년">1년</a></li>
+                                        </ol>
+                                    </td>
+                                    <td>
+                                        <label for="from-dpic">From<input type="text" id="from-dpic" name="from-dpic" /></label><label for="to-dpic"><input type="text" id="to-dpic" name="to-dpic"></label>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div>
+                            <button type="submit" id="submit-type" name="submit-type">검색</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <ul>
+                <li><a href="/" title="Mo-Pic란?">Mo-Pic란?</a></li>
+                <li class="vl"><span>|</span></li>
+                <li><a href="/" title="서비스약관">서비스약관</a></li>
+                <li class="vl"><span>|</span></li>
+                <li><a href="/" title="개인정보취급방침">개인정보취급방침</a></li>
+                <li class="vl"><span>|</span></li>
+                <li><a href="/" title="Yello Financial Group">Yello Financial Group</a></li>
+            </ul>
+        </footer>
+        
+        <script src="/lib/jquery/dist/jquery.min.js"></script>
+        <script src="/lib/jquery-ui/jquery-ui.min.js"></script>
+        <script src="/lib/iCheck/icheck.min.js"></script>
+        <script src="/dist/static/scripts/admin-ui.js"></script>
+
+        <script type="text/javascript">
+            $(function() {
+                $( "#big-cate, #mid-cate" ).selectmenu();
+
+                $('input').iCheck({
+                    checkboxClass: 'icheckbox_minimal',
+                    radioClass: 'iradio_minimal',
+                    increaseArea: '20%' // optional
+                  });
+
+                $( "#from-dpic" ).datepicker({
+                  defaultDate: "+1w",
+                  changeMonth: true,
+                  numberOfMonths: 3,
+                  onClose: function( selectedDate ) {
+                    $( "#to-dpic" ).datepicker( "option", "minDate", selectedDate );
+                  }
+                });
+                $( "#to-dpic" ).datepicker({
+                  defaultDate: "+1w",
+                  changeMonth: true,
+                  numberOfMonths: 3,
+                  onClose: function( selectedDate ) {
+                    $( "#from-dpic" ).datepicker( "option", "maxDate", selectedDate );
+                  }
+                });
+
+                 $(".register-period a")
+                  .button()
+                  .click(function( event ) {
+                    event.preventDefault();
+                  });
+              });
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
