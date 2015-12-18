@@ -2,6 +2,8 @@
 
 var gulp = require('gulp'),
     browserify = require('browserify'), // Bundles JS
+    concat = require('gulp-concat'),
+    uglify = require('gulp-uglifyjs'),
     minifyCss = require('gulp-minify-css'),
     del = require('del'),
     flatten = require('gulp-flatten'),
@@ -22,8 +24,8 @@ var paths = {
     JS: ['./app/**/**/*.js'],
     IMAGES: '/app/static/images/**/*',
     CSS: ['./app/**/css/*.css'],
-    MAIN_JS_ENTRIES: [ './app/static/scripts/admin-ui.js'],
-    MAIN_JS_OUTPUTS: [ './dist/static/scripts/admin-ui.js'],
+    MAIN_JS_ENTRIES: [ './app/static/scripts/*.js'],
+    MAIN_JS_OUTPUTS: './dist/static/scripts/',
     DIST: './dist'
 };
 
@@ -49,18 +51,11 @@ gulp.task('css', function() {
 
 
 gulp.task('js', function(done) {
-    return browserify({
-    entries: paths.MAIN_JS_ENTRIES,
-    debug: true
-    })
-    // .transform('babelify', { presets: ['es2015', 'react'], sourceMaps: true })
-    .plugin(factor, {
-        outputs: paths.MAIN_JS_OUTPUTS
-    })
-    .bundle()
-    .on('error', console.error.bind(console))
-    .pipe(source('admin-ui.js'))
-    .pipe(gulp.dest('./dist/static/scripts/'));
+    return gulp.src(paths.MAIN_JS_ENTRIES)
+    //return gulp.src(paths.MAIN_JS_ENTRIES)
+    // .pipe(concat('admin-ui.js'))
+    // .pipe(uglify('admin-ui.js'))
+    .pipe(gulp.dest(paths.MAIN_JS_OUTPUTS));
 });
 
 
@@ -82,7 +77,8 @@ gulp.task('clean', function(callback) {
 gulp.task('watch', function() {
     gulp.watch(paths.HTML, ['html']);
     gulp.watch(paths.CSS, ['css']);
-    gulp.watch(paths.JS, ['js-watch', 'lint']);
+    // gulp.watch(paths.JS, ['js-watch', 'lint']);
+    gulp.watch(paths.JS, ['js-watch']);
     gulp.watch(paths.IMAGES, ['images']);
 });
 

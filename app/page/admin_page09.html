@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>금융 쿠차 모픽 관리자</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="keyword" content="금융, 저축, 보험, 대출, 카드, P2P, 환율, 금융 계산기, 수수료 " />
+        <meta name="description" content="yfg 모픽" />
+        <meta name="author" content="yfg" />
+        <meta name="publisher" content="yfg" />
+        <meta name="robots" content="ALL" /> 
+        <meta name="robots" content="INDEX, FOLLOW" />
+        
+        <link type="text/css" rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css" />
+        <link type="text/css" rel="stylesheet" href="/lib/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css" />
+        <link type="text/css" rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css" />
+        <link type="text/css" rel="stylesheet" href="/lib/summernote/dist/summernote.css" />
+        <link type="text/css" rel="stylesheet" href="/lib/bootstrap-fileinput/css/fileinput.min.css" media="all" />
+        <link type="text/css" rel="stylesheet" href="/dist/static/css/admin-ui.css" />
+    </head>
+
+    <body id="admin">
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div id="header_wrapper" class="clearfix">
+                    <nav id="gnb">
+                        <ul class="gnb-list clearfix">
+                            <li><a href="/" title="관리">관리<span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span></a></li>
+                            <li class="vl">|</li>
+                            <li><a href="/" title="이벤트">이벤트</a></li>
+                            <li class="vl">|</li>
+                            <li><a href="/" title="고객센터">고객센터<span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span></a></li>
+                        </ul>
+                        <ol class="gnb-sub-list">
+                            <li><a href="/" title="추천상품 관리">추천상품 관리</a></li>
+                            <li><a href="/" title="이벤트 관리">이벤트 관리</a></li>
+                            <li><a href="/" title="1:1 문의 답변">1:1 문의 답변</a></li>
+                            <li><a href="/" title="통계">통계</a></li>
+                        </ol>
+                        <ol class="gnb-sub-list"></ol>
+                        <ol class="gnb-sub-list">
+                            <li><a href="/" title="고객센터1">고객센터1</a></li>
+                            <li><a href="/" title="고객센터2">고객센터2</a></li>
+                        </ol>
+                    </nav>
+                </div>
+                <h1><a href="/" title="Mo-Pic"><img src="/dist/static/images/common/mp_logo.png" alt="mopic" width="114"></a></h1>
+                <div class="quick_link clearfix">
+                    <ol>
+                        <li><a href="/" title="계산기"><span class="ico-cal"></span>계산기</a></li>
+                        <li><a href="/" title="수수료"><span class="ico-char"></span>수수료</a></li>
+                        <li><a href="/" title="지점찾기"><span class="ico-store"></span>지점찾기</a></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <div id="content-wrapper" class="container">
+            <div class="row">
+                <div class="current-location col-md-12">
+                    <ol class="clearfix">
+                        <li><a href="/" title="home"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a></li>
+                        <li class="arr">&gt;</li>
+                        <li><a href="/" title="관리">관리</a></li>
+                        <li class="arr">&gt;</li>
+                        <li><a href="/" title="통계">통계</a></li>
+                        <li class="arr">&gt;</li>
+                        <li><a href="/" title="회원분석">회원분석</a></li>
+                    </ol>
+                </div>
+                <div class="clearfix">
+                    <nav class="left-navi col-md-2">
+                        <h2>관리</h2>
+                        <ol>
+                            <li>
+                                <a href="/" title="추천상품 관리">추천상품 관리<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></a>
+                                <ol class="sub-list">
+                                    <li><a href="/" title="상품정보 조회">상품정보 조회</a></li>
+                                    <li><a href="/" title="상품등록">상품등록</a></li>
+                                </ol>
+                            </li>
+                            <li>
+                                <a href="/" title="이벤트 관리">이벤트 관리<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></a>
+                                <ol class="sub-list">
+                                    <li><a href="/" title="이벤트 조회">이벤트 조회</a></li>
+                                    <li><a href="/" title="이벤트 등록">이벤트 등록</a></li>
+                                </ol>
+                            </li>
+                            <li>
+                                <a href="/" title="메뉴관리">메뉴관리</a>
+                            </li>
+                            <li>
+                                <a href="/" title="배경이미지설정">배경이미지설정</a>
+                            </li>
+                            <li>
+                                <a href="/" title="1:1 문의 답변">1:1 문의 답변</a>
+                            </li>
+                            <li class="select">
+                                <a href="/" title="통계">통계<span class="glyphicon glyphicon-menu-up" aria-hidden="true"></span></a>
+                                <ol class="sub-list">
+                                    <li><a href="/" title="Dashboard">Dashboard</a></li>
+                                    <li><a href="/" title="방문현황">방문현황</a></li>
+                                    <li class="select"><a href="/" title="회원분석">회원분석</a></li>
+                                </ol>
+                            </li>
+                        </ol>
+                    </nav>
+                    <div class="cont-area col-md-10">
+                        <div class="form-wrap clearfix" style="width:730px;">
+                            <form id="user-visit-view" name="user-visit-view" method="post" action="/">
+                                <h3>회원분석</h3>
+                                <table class="table">
+                                    <caption>회원분석</caption>
+                                    <colgroup>
+                                        <col width="130px;"></col>
+                                        <col width="*"></col>
+                                    </colgroup>
+                                    <thead></thead>
+                                    <tbody>
+                                        <tr>
+                                            <th>기간</th>
+                                            <td>
+                                                <div class="register-period btn-group" role="group" aria-label="방문자 조회">
+                                                    <button type="button" class="btn btn-default">일간</button>
+                                                    <button type="button" class="btn btn-default">주간</button>
+                                                    <button type="button" class="btn btn-default">월간</button>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="date-pic-group clearfix">
+                                                    <div class="form-group">
+                                                        <div class='input-group date' id='from-dpic'>
+                                                            <input type='text' class="form-control" />
+                                                            <span class="input-group-addon">
+                                                                <span class="glyphicon glyphicon-calendar"></span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group hv">-</div>
+                                                    <div class="form-group">
+                                                        <div class='input-group date' id='to-dpic'>
+                                                            <input type='text' class="form-control" />
+                                                            <span class="input-group-addon">
+                                                                <span class="glyphicon glyphicon-calendar"></span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="submit-area">
+                                    <button type="submit" id="product-search" name="product-search">검색</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="user-visit-count">
+                            <table class="mem-analysis table">
+                                <caption>회원분석</caption>
+                                <colgroup>
+                                    <col width="125px"></col>
+                                    <col width="144px;"></col>
+                                    <col width="229px;"></col>
+                                    <col width="229px;"></col>
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th colspan="2" class="devide">구분</th>
+                                        <th>회원수(1033)</th>
+                                        <th>비중</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th rowspan="2">성별</th>
+                                        <th class="tl">남</th>
+                                        <td>592</td>
+                                        <td>57%</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="tl">여</th>
+                                        <td>441</td>
+                                        <td>43%</td>
+                                    </tr>
+                                    <tr>
+                                        <th rowspan="7">연령별</th>
+                                        <th class="tl">14세 이하</th>
+                                        <td>13</td>
+                                        <td>1%</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="tl">20세 이하(14~19세)</th>
+                                        <td>13</td>
+                                        <td>1%</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="tl">20대(20~29세)</th>
+                                        <td>13</td>
+                                        <td>1%</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="tl">30대(30~39세)</th>
+                                        <td>13</td>
+                                        <td>1%</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="tl">40대(40~49세)</th>
+                                        <td>13</td>
+                                        <td>1%</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="tl">50대(50~59세)</th>
+                                        <td>13</td>
+                                        <td>1%</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="tl">60대 이상</th>
+                                        <td>13</td>
+                                        <td>1%</td>
+                                    </tr>
+                                    <tr>
+                                        <th rowspan="2">신규 가입현황</th>
+                                        <th class="tl">YelloPASS</th>
+                                        <td>424</td>
+                                        <td>42%</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="tl">YelloPASS + mopic</th>
+                                        <td>609</td>
+                                        <td>58%</td>
+                                    </tr>
+                                    <tr>
+                                        <th>탈퇴현황</th>
+                                        <th>-</th>
+                                        <td>42</td>
+                                        <td>4%</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <ul class="clearfix">
+                <li><a href="/" title="Mo-Pic란?">Mo-Pic란?</a></li>
+                <li class="vl"><span>|</span></li>
+                <li><a href="/" title="서비스약관">서비스약관</a></li>
+                <li class="vl"><span>|</span></li>
+                <li><a href="/" title="개인정보취급방침">개인정보취급방침</a></li>
+                <li class="vl"><span>|</span></li>
+                <li><a href="/" title="Yello Financial Group">Yello Financial Group</a></li>
+            </ul>
+        </footer>
+
+        <script src="/lib/jquery/dist/jquery.min.js"></script>
+        <!-- file upload plugin -->
+        <script src="/lib/bootstrap-fileinput/js/plugins/canvas-to-blob.min.js" type="text/javascript"></script>
+        <script src="/lib/bootstrap-fileinput/js/fileinput.min.js"></script>
+        <!-- datepicker plugin -->
+        <script src="/lib/moment/min/moment-with-locales.js"></script>  
+        <script src="/lib/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+        <!-- text editor plugin -->
+        <script src="/lib/summernote/dist/summernote.min.js"></script>
+
+        <script src="/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="/dist/static/scripts/admin-ui.js"></script>
+
+        <script type="text/javascript">
+            $(function() {
+
+                $('#from-dpic').datetimepicker();
+                $('#to-dpic').datetimepicker({
+                    useCurrent: false
+                });
+                $("#from-dpic").on("dp.change", function (e) {
+                    $('#to-dpic').data("DateTimePicker").minDate(e.date);
+                });
+                $("#to-dpic").on("dp.change", function (e) {
+                    $('#from-dpic').data("DateTimePicker").maxDate(e.date);
+                });  
+            });
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
